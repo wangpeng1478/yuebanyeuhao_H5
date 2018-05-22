@@ -1,0 +1,724 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="favicon50x50.png" type="image/x-icon" />
+  <meta name="format-detection" content="telephone=no">
+  <!-- 是否删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <title>筛选</title>
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+.container .entrustForm{
+   margin: 0.853333rem auto 0 auto;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <div id="index-page" class="content">
+    <header class="header">
+      <div class="header-po">
+        <a class="sc-logo" href="index.html">悦办越好</a>
+        <a href="javascript:;" id="searchaa" class="bt-user-enter  iconfont icon-sousuo"></a></div>
+    </header>
+    <!-- header end -->
+    <!-- section start -->
+    <section class="listing header-show">
+      <!-- filter start -->
+      <div id="filtermask"></div>
+      <div class="filter">
+        <ul class="filter-nav">
+          <li class="js-touch-state" data-id="filter_region" data-checked='false'> <b>位置</b>
+          </li>
+          <li class="js-touch-state" data-id="filter_acreage" data-checked='false'> <b>面积</b>
+          </li>
+          <li class="js-touch-state" data-id="filter_price" data-checked='false'>
+            <b>价格</b>
+          </li>
+          <li class="js-touch-state" data-id="filter_more" data-checked='false'>
+            <b>更多</b>
+        </ul>
+        <div class="filter-cont">
+          <div class="filter-box" id="filter_region">
+            <div class="filter-wrap">
+              <ul id="filterLocation" class="filter-menu">
+                <li data-flag="1" class="js-touch-state has-children active">
+                  <a href="javascript:;">区域</a>
+                </li>
+                <li data-flag="2" class="js-touch-state has-children ">
+                  <a href="javascript:;">地铁</a>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-wrap" id="locationItems"></div>
+            <div class="filter-wrap" id="childItems" style="display: none"></div>
+          </div>
+          <!-- acreage -->
+          <div class="filter-box" id="filter_acreage">
+            <div class="filter-wrap" id="areaItems"></div>
+          </div>
+          <!-- price -->
+          <div class="filter-box" id="filter_price">
+            <div class="filter-wrap">
+              <ul id="filterPrice" class="filter-menu">
+                <li data-flag="1" class="js-touch-state has-children ">
+                  <a href="javascript:;">按总价</a>
+                </li>
+                <li data-flag="2" class="js-touch-state has-children active">
+                  <a href="javascript:;">按单价</a>
+                </li>
+              </ul>
+            </div>
+            <div class="filter-wrap" id="priceItems"></div>
+          </div>
+          <div class="filter-box" id="filter_more">
+            <div class="filter-wrap" id="moreItems">
+              <a href="javascript:void(0);" class="bt-clear-all">清空条件</a>
+              <a href="javascript:void(0);" class="bt-clear-sub">确定</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- filter end -->
+      <!-- filter end -->
+      <!-- column start -->
+      <div class="column product" id="container">
+        <ul class="listCondition clearfix" id="listCondition" style="display: none;">
+          <li class="remov"><a href="javascript:void(0);"><i class="iconfont icon-shanchu1"></i>清空</a></li>
+        </ul>
+        <div class="column-body">
+        <p class="Loading"><i class="iconfont icon-loading"></i>加载中...</p>
+
+<div class="container">
+
+<div class="entrustWrap">
+        <p class="tipEntrust">Sorry,暂无满足您筛选条件的房源</p>
+        <div class="entrustForm cl">
+          <form id="mszf-T" action="">
+            <input type="text" placeholder="请输入手机号码" maxlength="11" pattern="[0-9]*" autocomplete="off" required="">
+            <input type="submit" value="联系我">
+          </form>
+        </div>
+      </div>
+
+</div>
+
+
+
+          <ul class="result-list">
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+            <li>
+              <a href="page.html">
+                        <img class="pic-list-left" src="img/rings.png" data-echo="img/dome.jpg">
+                        <div class="result-right">
+                            <h3>xxx广场</h3>
+                            <div>
+                                <span class="price-list-new">11元/m²&sdot;天</span>
+                                <i class="iconfont icon-juli1"></i>
+                                136-2188.2㎡
+                            </div>
+                            <div>
+                                <i class="iconfont icon-juli"></i>
+                                静安- 静安寺
+                            </div>
+                            <div>
+                                <i class="iconfont icon-ditie"></i>
+                                距离7号线静安寺站约391米
+                            </div>
+                        </div>
+                    </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- column end -->
+      <!-- 加载更多。。。  -->
+      <p class="Loading"><i class="iconfont icon-loading"></i>加载中...</p>
+    </section>
+    <!-- section end -->
+    <!-- section search start -->
+    <!-- section search end -->
+    <!-- footer -->
+    <footer>
+      <a class="logo" href="javascript:;"></a>
+      <a href="tel:021-60520217" class="bt-tel-index"><span class="iconfont icon-dianhua1"></span>021-60520217</a>
+      <p>
+        ©2015-2017 上海德御房地产经纪事务所 沪ICP备15041209号-1
+        <br> 浦东地址：上海市崂山路526号江苏大厦1层
+        <br> 浦西地址：上海市南京东路800号新一百大厦15C室
+      </p>
+    </footer>
+    <!-- footer -->
+  </div>
+  <!-- 搜索 -->
+  <div id="news-page" class="content">
+    <div class="index-search">
+      <div class="search_input cl">
+        <div class="search_box cl">
+          <form id="form1" action="" class="cl"  name="form" method="get">
+            <input name="dome" type="text" maxlength="20" placeholder="搜索楼盘/商圈" autocomplete="off" id="idNumber1" autofocus="autofocus" />
+            <input type="submit" id="search">
+            <label class="fa fa-search iconfont icon-sousuo" for="search"></label>
+          </form>
+        </div>
+      </div>
+      <a href="javascript:;" id="sidebarr" class="sidebar">取消</a>
+      <!-- ======== -->
+      <div class="cookieul">
+        <div class="coo_nav">
+          <h3>最近搜索</h3>
+          <a href="javascript:;" class="fa fa-trash-o iconfont icon-shanchu1" id="his-dele"></a>
+        </div>
+        <div class="delete cl"></div>
+        <div class="coo_nav_f">
+          <h3>大家都在找</h3>
+        </div>
+        <div class="delete_f cl">
+          <a href="javascript:;" class="word-break">dome1</a>
+          <a href="javascript:;" class="word-break">dome2</a>
+          <a href="javascript:;" class="word-break">dome3</a>
+          <a href="javascript:;" class="word-break">dome4</a>
+          <a href="javascript:;" class="word-break">dome5</a>
+          <a href="javascript:;" class="word-break">dome6</a>
+          <a href="javascript:;" class="word-break">dome7</a>
+          <a href="javascript:;" class="word-break">dome8</a>
+          <a href="javascript:;" class="word-break">dome9</a>
+        </div>
+      </div>
+    </div>
+    <!-- 搜索 -->
+  </div>
+  <script type="text/javascript" src="js/rem/rem.js"></script>
+  <script type="text/javascript" src="js/sea/zepto.min.v2.js"></script>
+  <script type="text/javascript" src="js/sea/sx.js"></script>
+  <script type="text/javascript" src="js/sea/filter.js"></script>
+  <script type="text/javascript" src="js/Echo.js"></script>
+  <script type="text/javascript" src="js/global.js"></script>
+  <script>
+  //===延迟加载
+  Echo.init({
+    offset: 0, //离可视区域多少像素的图片可以被加载
+    throttle: 0 //图片延迟多少毫秒加载
+  });
+  window.onload = function() {
+    $('a').each(function() {
+      $(this).on('touchstart', function() {
+        $(this).addClass('touch');
+      });
+      $(this).on('touchend touchmove touchcancel', function() {
+        $(this).removeClass('touch');
+      });
+    });
+  }
+
+  var loading = false;
+$(window).on('scroll', function () {
+  if($(document).scrollTop() + $(window).height() > $(document).height() - 100){
+    if(!loading){
+      push();
+    }
+  };
+})
+function push() {
+  //ajax添加数据相关
+  loading = true;
+   $.ajax({
+       url: 'http://www.yuebanyuehao.com/laravel/public/search_ajax1',
+       type: 'POST',
+       dataType: 'json'
+   })
+   .done(function(data) {
+       console.log(data);
+       loading = false;
+   })
+   .fail(function() {
+       console.log("error");
+   })
+   .always(function() {
+       console.log("complete");
+   });
+   
+}
+
+  </script>
+
+  <script>
+
+
+  </script>
+</body>
+
+</html>

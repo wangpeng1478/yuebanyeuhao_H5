@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="favicon50x50.png" type="image/x-icon" />
+  <meta name="format-detection" content="telephone=no">
+  <!-- 是否删除默认的苹果工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/Entrust.css">
+  <title>在线委托</title>
+</head>
+<body>
+  <div id="index-page" class="content">
+    <!-- header -->
+    <header class="header">
+      <div class="header-po">
+        <a class="sc-logo" href="index.html">悦办越好</a>
+        <a href="javascript:;" id="searchaa" class="bt-user-enter iconfont icon-sousuo"></a></div>
+    </header>
+    <!-- header -->
+
+  <!-- header -->
+    <section class="yuyeu">
+      <form class="tForm" action="">
+        <h3>在线委托</h3>
+        <p>留下联系方式，顾问带您实地看房</p>
+        <textarea placeholder="你的需求， 如：外滩SOHO，200平米写字楼，简装带家私，租金8元/㎡/天左右，附近有地铁"></textarea>
+        <input autocomplete="off" id="yu-text" type="text" placeholder="请输入手机号码" pattern="[0-9]*" maxlength="11" required autofocus="autofocus">
+        <input id="yu-submit" type="submit" value="立即预约">
+      </form>
+      <p class="service-tip">如有任何疑问，欢迎致电&nbsp;<a href="tel:021-60520217" class="service-tip-tel">021-60520217</a>&nbsp;咨询。</p>
+    </section>
+
+  </div>
+  <!-- 搜索 -->
+  <div id="news-page" class="content">
+    <div class="index-search">
+      <div class="search_input cl">
+        <div class="search_box cl">
+          <form id="form1" action="" class="cl">
+            <input type="text" maxlength="20" placeholder="搜索楼盘/商圈" autocomplete="off" id="idNumber1" autofocus="autofocus" />
+            <input type="submit" id="search">
+            <label class="fa fa-search iconfont icon-sousuo" for="search"></label>
+          </form>
+
+        </div>
+      </div>
+      <a href="javascript:;" id="sidebarr" class="sidebar">取消</a>
+      <!-- ======== -->
+      <div class="cookieul">
+        <div class="coo_nav">
+          <h3>最近搜索</h3>
+          <a href="javascript:;" class="fa fa-trash-o iconfont icon-shanchu1" id="his-dele"></a>
+        </div>
+        <div class="delete cl"></div>
+        <div class="coo_nav_f">
+          <h3>大家都在找</h3>
+        </div>
+        <div class="delete_f cl">
+          <a href="javascript:;" class="word-break">dome1</a>
+          <a href="javascript:;" class="word-break">dome2</a>
+          <a href="javascript:;" class="word-break">dome3</a>
+          <a href="javascript:;" class="word-break">dome4</a>
+          <a href="javascript:;" class="word-break">dome5</a>
+          <a href="javascript:;" class="word-break">dome6</a>
+          <a href="javascript:;" class="word-break">dome7</a>
+          <a href="javascript:;" class="word-break">dome8</a>
+          <a href="javascript:;" class="word-break">dome9</a>
+        </div>
+      </div>
+    </div>
+    <!-- 搜索 -->
+  </div>
+  <script type="text/javascript" src='js/sea/zepto.min.v2.js'></script>
+  <script type="text/javascript" src='js/jquery/jquery.min.js'></script>
+  <script type="text/javascript" src='js/Echo.js'></script>
+  <script type="text/javascript" src='js/rem/rem.js'></script>
+  <script type="text/javascript" src='js/global.js'></script>
+  <script type="text/javascript" src='js/index.js'></script>
+  <script type="text/javascript" src='js/swiper/js/swiper.min.js'></script>
+  <script>
+  //===延迟加载<img src="images/rings.png"  data-echo="picture/xinwen.png">
+  Echo.init({
+    offset: 0, //离可视区域多少像素的图片可以被加载
+    throttle: 0 //图片延迟多少毫秒加载
+  });
+   $(".tForm").submit(function() {
+    alertx('预约成功');
+    setTimeout(function() {
+      window.history.back(-1); 
+    }, 2000);
+    return false;
+  })
+  </script>
+</body>
+
+</html>
